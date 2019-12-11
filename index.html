@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css-properties</title>
+		<link href="style.css" rel="stylesheet">
+		<style>
+			a:link{
+				color:red;
+				text-decoration:none;
+			}
+			
+			a:visited{
+				color:blue;
+			}
+			
+			a:hover{
+				font-weight:bold;
+				
+			}
+			
+			a:active{
+			color: black;
+			background-color:yellow;
+			}
+			
+			.img-a:hover img{   
+	            opacity: 0.8;
+            }
+		</style>
+	</head>
+<body>
+	<div class="block0">
+	<h1>Cascading Style Sheets</h1>
+	<p class="p1">
+		Cascading Style Sheets або скорочено CSS) — спеціальна мова, що використовується для опису зовнішнього вигляду сторінок, написаних мовами розмітки даних.
+	</p>
+	<!--https://www.w3.org/TR/CSS21/propidx.html-->
+	<a class="img-a" target="_blank" href="https://www.w3.org/TR/CSS21/propidx.html">
+	<img src="CSS.png" class="css-logo"> </a>
+	<div class="block-00"> 
+	<span>Розглянемо наступні властивості</span>
+		<ul>
+			<li><a href="#item1">Властивості для оформлення тексту</a></li>
+			<li><a href="#item2">Властивості для задання фону веб-сторінки</a></li>
+			<li>Внутрішні та зовнішні відступи</li>
+			<li>Тінь і прозорість елемента</li>
+			<li>Рамки</li>
+		</ul>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	<div id="item1" class="block block1">
+		<h2>Властивості для оформлення тексту</h2>
+		<p>
+		
+		<ul>
+			<li>font-size   - розмір шрифту. Задається в px, pt (абсолютні од.вимірювання), 
+                                                                          % , em (відносні) </li>
+			<li>font-weight – жирність. найбільш використовувані значення: normal, bold</li>
+			<li>font-style – стиль шрифту. Значення:  normal,  italic</li>
+			<li>font-family – шрифт. Додаткові можливості :      sans-serif – без засічок,  
+  								serif – з засічками</li>
+			<li>color – колір шрифту</li>
+			<li>text-decoration – підкреслення тексту.  Найбільш використовувані значення: 
+ 									 underline,    none,  overline, line-through. </li>
+			<li>text-transform  - регістр. Значення: none,  lowercase – встановить нижній регістр,
+   							   uppercase, 
+   							   capitalize – кожне слово з великої літери</li>
+			<li>text-align – вирівнювання по горизонталі. Значення: center, left, right, justify</li>
+			<li>vertical-align -  вирівнювання по вертикалі. Значення: top, middle, bottom. Також цю властивість використовуємо для нижнього і верхнього індексу. Для цього використовуємо значення sub для нижнього і super  для верхнього індексу, та зменшуємо шрифт за допомогою властивості   font-size</li>   
+			<li>line-height: висота рядку. Задається за допомогою: множника (наприклад: 1.5), %,
+ 									px, em, або значення: normal	</li>
+        </ul>
+		</p>
+	</div>
+	<div class="block block2">
+		<h2>Властивості для оформлення фону веб-сторінки</h2>
+		<p>
+			
+		<ul>
+			<li>background-color – колір фону. </li>
+			<li>background-image: url(“  ”); </li>
+			<li>background-repeat: - режим повторення зображення. Значення no-repeat, repeat-x, 
+  											repeat-y, repeat</li>
+			<li>background-attachment:  fixed, scroll</li>
+			<li>background-position: x y.         x та y задаються у px або %  і позначають  положення забраження, заданого за допомогою властивості background-image.  
+            X  також може набувати значень: left | center | right,
+            а Y -  top | center | bottom </li>
+			<li>linear-gradient([кут або напрямок], [колір1], [колір2]). </li>
+		</ul>
+		</p>
+	</div>
+	
+	<div class="block block3">
+		<h2>Внутрішні та зовнішні відступи</h2>
+		<p>
+		<span>
+			Внутрішні відступи: від зовнішніх границь до вмісту елемента
+		</span>	
+		<ul>
+			<li>padding: 10px;  - задає внутрішні відступи 10px  з усіх боків </li>
+			<li>padding: 10px 15px; - задає внутрішні відступи зверху і знизу  по 10px, зліва та справа – 20px</li>
+			<li>padding: 10px 15px 20px;  зверху – по 10пкс, зліва та справа – по 15, знизу – 20пкс</li>
+			<li>padding: 10px 15px 20px 0px;  задано відступи зверху справа знизу зліва </li>
+		</ul>
+		<span>
+			Зовнішні відступи: від зовнішніх границь елементу до елемента-родича або сусідніх елементів
+		</span>	
+		<ul>
+			<li>margin: 10px;  - задає внутрішні відступи 10px  з усіх боків </li>
+			<li>margin: 10px 15px; - задає зовнішні відступи зверху і знизу  по 10px, зліва та справа – 20px</li>
+			<li>margin: 10px 15px 20px;  зверху – по 10пкс, зліва та справа – по 15, знизу – 20пкс</li>
+			<li>margin: 10px 15px 20px 0px;  задано відступи зверху справа знизу зліва </li>
+		</ul>
+		</p>
+	</div>
+	
+	<div class="block block4">
+		<h2>Тінь і прозорість елемента</h2>
+		<p>
+			
+		<ul>
+		<li>box-shadow: <зсув по x> <зсув по y> <розмиття> <розтягнення> <колір>
+         Зауваження: чим більше значення розмиття тим ширшою і світлішою стає тінь. За замовчуванням значення розмиття = 0px – тінь при цьому буде чіткою.
+         </li>
+		 <li>opacity – прозорість елемента. Значення приймає десяткові від 0 до 1 (наприклад 0.9 ) 
+          </li>
+		</ul>
+		</p>
+	</div>
+	<div class="block block5">
+		<h2>Рамки</h2>
+		<p>
+			
+		<ul>
+			<li> border-width – ширина рамки
+			</li>
+			<li>border-style – стиль рамки. Поширені значення: solid – суцільна лінія,  
+ 								  dashed – штрихована лінія, 
+  							      	  dotted – лінія з крапок 
+
+			</li>
+			<li>border-color – колір рамки.  
+			</li>
+			<li>Ці три властивості можна задати за допомогою однієї:
+             <br>border:[ border-width] [border-style] [border-color]
+
+			</li>
+			<li>Можна встановити рамку лише для якоїсь сторони за допомогою властивостей
+              border-top,	 	border-right,       	   border-bottom, 		border-left
+			</li>
+			<li>border-radius:  заокруглення країв. Задається в px, % . Можна задавати індивідуально для кожного кута через пробіл
+			</li>
+		</ul>
+		</p>
+	</div>
+</body>
+</html>
